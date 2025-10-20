@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SƠN ĐẸP TRAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Be Vietnam Pro', 'sans-serif'],
+            },
+            colors: {
+              'primary': '#39FF14', // Neon Green
+              'secondary': '#00C569', // Vibrant Emerald
+              'accent': '#00F5D4', // Bright Teal
+              'dark-bg': '#061411', // Deep Teal/Green
+              'dark-bg-2': '#0A1E1A',
+              'light-text': '#E0FFF8', // Light Mint
+              'gray-text': '#A0C0B8', // Muted Teal/Gray
+              'dark-surface': 'rgba(10, 30, 26, 0.6)', // For glassmorphism cards
+            },
+            boxShadow: {
+              'emboss': '5px 5px 10px #030a08, -5px -5px 10px #091e1a',
+              'emboss-inset': 'inset 5px 5px 10px #030a08, inset -5px -5px 10px #091e1a',
+              'glow-primary': '0 0 15px rgba(57, 255, 20, 0.5), 0 0 5px rgba(57, 255, 20, 0.8)',
+              'glow-secondary': '0 0 20px rgba(0, 197, 105, 0.6), 0 0 8px rgba(0, 197, 105, 0.9)',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px) scale(0.98)' },
+                '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+              },
+              pulseGlow: {
+                '0%, 100%': { boxShadow: '0 0 20px rgba(57, 255, 20, 0.4), 0 0 30px rgba(0, 245, 212, 0.4)' },
+                '50%': { boxShadow: '0 0 30px rgba(57, 255, 20, 0.7), 0 0 45px rgba(0, 245, 212, 0.7)' },
+              },
+              backgroundPan: {
+                  '0%': { 'background-position': '0% 50%' },
+                  '50%': { 'background-position': '100% 50%' },
+                  '100%': { 'background-position': '0% 50%' },
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
+              'background-pan': 'backgroundPan 15s ease infinite',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-dark-bg text-light-text bg-gradient-to-br from-dark-bg via-dark-bg-2 to-emerald-900/50 bg-[size:200%_200%] animate-background-pan">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

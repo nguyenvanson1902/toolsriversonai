@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube AI Magic Wand</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <custom-navbar></custom-navbar>
+    
+    <main class="container mx-auto px-4 py-8">
+        <div id="vanta-bg" class="absolute top-0 left-0 w-full h-full -z-10"></div>
+        
+        <section class="text-center mb-16">
+            <h1 class="text-5xl font-bold mb-6 text-gray-800">YouTube AI Magic Wand</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Transform your YouTube experience with AI-powered tools for content creators and viewers alike</p>
+        </section>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="text-blue-500 mb-4">
+                    <i data-feather="youtube" class="w-12 h-12"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Video Summarizer</h3>
+                <p class="text-gray-600">Get concise summaries of long YouTube videos in seconds, saving you hours of watch time.</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="text-purple-500 mb-4">
+                    <i data-feather="clipboard" class="w-12 h-12"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">AI Transcripts</h3>
+                <p class="text-gray-600">Generate accurate transcripts with timestamps for any YouTube video automatically.</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div class="text-green-500 mb-4">
+                    <i data-feather="search" class="w-12 h-12"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Smart Search</h3>
+                <p class="text-gray-600">Find exactly what you're looking for within videos using natural language queries.</p>
+            </div>
+        </div>
+        
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">Try It Now</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input 
+                        type="text" 
+                        placeholder="Paste YouTube URL here..." 
+                        class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        Analyze Video
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Paste URL</h3>
+                    <p class="text-gray-600">Copy and paste any YouTube video link</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">AI Processing</h3>
+                    <p class="text-gray-600">Our AI analyzes the video content</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Get Results</h3>
+                    <p class="text-gray-600">Receive summaries, transcripts and more</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <custom-footer></custom-footer>
+    
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        VANTA.NET({
+            el: "#vanta-bg",
+            color: 0x3b82f6,
+            backgroundColor: 0xf3f4f6,
+            points: 8,
+            maxDistance: 18,
+            spacing: 16
+        });
+    </script>
+</body>
+</html>
